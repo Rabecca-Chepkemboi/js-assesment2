@@ -1,5 +1,5 @@
 
-class AncestralStories {                  //created a main cla ss oralStories
+class AncestralStories {                  //created a class oralstories and its attributes
     constructor(moralLesson, ageGroup, length) {
         this.moralLesson = moralLesson;
         this.ageGroup = ageGroup;
@@ -7,11 +7,11 @@ class AncestralStories {                  //created a main cla ss oralStories
     }
 
     findLength() {
-        return this.moralLesson.length;  //Iorder to know how long does one story take
+        return this.moralLesson.length;  // method find length to know how long each story takes
     }
 }
 
-class Story extends AncestralStories {
+class Story extends AncestralStories {        //class story for diferent stories that was narrated
     constructor(ageGroup, moralLesson) {
         super(ageGroup, moralLesson);
         this.moralLesson = moralLesson;
@@ -19,7 +19,7 @@ class Story extends AncestralStories {
     }
 }
 
-class StoryTeller {
+class StoryTeller {                          //class storyteller for the person who was narrating the stories
     constructor(tellersName) {
         this.tellersName = tellersName
     }
@@ -36,7 +36,7 @@ class StoryTeller {
     }
 }
 
-class Translator {
+class Translator {                                       //class translator for the language that was being used
     constructor(targetLanguage) {
         this.targetLanguage = targetLanguage;
     }
@@ -54,7 +54,7 @@ const targetLanguage = "lusungu";
 
 //OUESTION2
 
-class Recipe{
+class Recipe{                    //create class recipe with is constractors
     constructor(uniqueIngredients, preparationTime, cookingMethod, nutritionalInformation){
         this.uniqueIngredients = uniqueIngredients;
         this.preparationTime = preparationTime;
@@ -63,28 +63,28 @@ class Recipe{
     }
 }
       
-class MoroccanRecipe extends Recipe{
+class MoroccanRecipe extends Recipe{             //created class morocan recipe that inherits from class recipe
 
     constructor (preparationTime, cookingMethod,spice_level){
             ("Moroccos food recipes", ingredients, preparationTime, cookingMethod, nutritionalInfo)
             this.spice_level = spice_level
     }
-        displayRecipe(){
+        displayRecipe(){              //created a method display recipe to get all the details about morocan food
             console.log("Moroccan food has a long cooking mehod and more ingredients");
         }
 }    
     
-class EthiopianRecipe extends Recipe{
+class EthiopianRecipe extends Recipe{      
     constructor (preparationTime, cookingMethod,spice_level){
             ("Ethiopia food recipes", ingredients, preparationTime, cookingMethod, nutritionalInfo)
             this.spice_level = spice_level
     }
-        displayRecipe(){
+        displayRecipe(){                            //created a method display recipe to get all the details about ethiopian food      
             console.log("Ethiopian staple food is Injera has a long cooking methodis bitter");
         }
     }    
         
-class NigerianRecipe extends Recipe{
+class NigerianRecipe extends Recipe{           //created a method display recipe to get all the details about nigerian food
       constructor (preparationTime, cookingMethod,spice_level){
             ("Nigeria food recipe", ingredients, preparationTime, cookingMethod, nutritionalInfo)
             this.spice_level = spice_level
@@ -113,8 +113,9 @@ class Predator extends AnimalSpecies{
     }
 }
 getInformation(){
-    console.log("Preditors hunting techniques: {self.hunting_method}");
+    super.getInformation()
 }
+console.log("Preditors hunting techniques");
 
 class Prey extends AnimalSpecies{
     constructor(typicalLifespan, migrationPattern){
@@ -123,3 +124,7 @@ class Prey extends AnimalSpecies{
     }
 }
 
+getInformation(){
+    super.getInformation()
+}
+console.log("Changes in migration pattern");

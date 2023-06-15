@@ -1,19 +1,19 @@
 
-class Ancestral_stories:                                  #created a class oralstories
+class Ancestral_stories:                                  #created a class oralstories and its attributes
     def __init__(self, length, moral_lesson, age_group):
         self.length = length
         self.moral_lesson = moral_lesson
         self.age_group = age_group
 
-    def find_length(self):
+    def find_length(self):                         # method find length to know how long each story takes
         return len(self.moral_lessson)
 
-class Fable(Ancestral_stories):
+class Story(Ancestral_stories):                          #class story for diferent stories that was narrated
     def __init__(self, length, moral_lesson, age_group):
         super().__init__(length, moral_lesson, age_group)
         self.moral_lesson = moral_lesson
 
-class StoryTeller:
+class StoryTeller:                                        #class storyteller for the person who was narrating the stories
     def __init__(self, tellers_name):
         self.tellers_name = tellers_name
 
@@ -28,7 +28,7 @@ class StoryTeller:
             
         
     
-class Translator:
+class Translator:                                               #class translator for the language that was being used
     def __init__(self, target_language):
         self.target_language = target_language
         target_language = "lusungu"
@@ -43,7 +43,7 @@ class Translator:
 
 #QUESTION2
 
-class Recipe:
+class Recipe:                                  #create class recipe with is constractors
      def __init__(self, unique_ingredients, preparation_time, cooking_method, nutritional_information):
             self.unique_ingredients = unique_ingredients
             self.preparation_time = preparation_time
@@ -51,12 +51,12 @@ class Recipe:
             self.nutritional_information = nutritional_information
     
         
-class MoroccanRecipe(Recipe):
+class MoroccanRecipe(Recipe):                #created class morocan recipe that inherits from class recipe
         def __init__(self, ingredients, preparation_time, cooking_method, nutritional_info, spice_level):
             super().__init__("Moroccos food recipes", ingredients, preparation_time, cooking_method, nutritional_info)
             self.spice_level = spice_level
     
-        def display_recipe(self):
+        def display_recipe(self):                  #created a method display recipe to get all the details about morocan food
             super().display_recipe()
             return "Moroccan food has a long cooking mehod and more ingredients"
     
@@ -67,17 +67,17 @@ class EthiopianRecipe(Recipe):
             self.injera_required = injera_required
     
     def display_recipe(self):
-            super().display_recipe()
+            super().display_recipe()           #created a method display recipe to get all the details about ethiopian food
             return "Ethiopian staple food is Injera has a long cooking methodis bitter"
     
     
         
-class NigerianRecipe(Recipe):
+class NigerianRecipe(Recipe):                         #created class morocan recipe that inherits from class recipe
     def __init__(self,ingredients, preparation_time, cooking_method, nutritional_info, palm_oil_required):
             super().__init__("Nigeria food recipe", ingredients, preparation_time, cooking_method, nutritional_info)
             self.palm_oil_required = palm_oil_required
     
-    def display_recipe(self):
+    def display_recipe(self):                            #created a method display recipe to get all the details about nigerian food
             super().display_recipe()
             return " Nigerian food has a short cooking method and less recipe"
 
