@@ -97,3 +97,29 @@ class NigerianRecipe extends Recipe{
 
 //QUESTION3    
 
+class AnimalSpecies{
+    constructor(diet, typicalLifespan, migrationPattern){
+        this.diet = diet;
+        this.typicalLifespan = typicalLifespan;
+        this.migrationPattern = migrationPattern
+    }
+}
+
+class Predator extends AnimalSpecies{
+    constructor(migrationPattern, typicalLifespan, huntinhMethod){
+        this.migrationPattern = migrationPattern;
+        this.typicalLifespan = typicalLifespan;
+        this.huntinhMethod = huntinhMethod;
+    }
+}
+getInformation(){
+    console.log("Preditors hunting techniques: {self.hunting_method}");
+}
+
+class Prey extends AnimalSpecies{
+    constructor(typicalLifespan, migrationPattern){
+        this.migrationPattern = migrationPattern;
+        this.typicalLifespan = typicalLifespan;
+    }
+}
+

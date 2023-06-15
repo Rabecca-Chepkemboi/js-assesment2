@@ -81,3 +81,32 @@ class NigerianRecipe(Recipe):
             super().display_recipe()
             return " Nigerian food has a short cooking method and less recipe"
 
+
+#QUESTION3
+
+class Animal_Species:
+    def __init__(self, name, migration_pattren, typical_lifespan):
+        self.name = name
+        self.migration_pattren = migration_pattren
+        self.typicla_lifespan = typical_lifespan
+
+
+class Predator(Animal_Species):
+    def __init__(self, name, migration_pattren, hunting_method):
+        super().__init__(name, migration_pattren)
+        self.hunting_method = hunting_method
+
+
+    def get_details(self):
+        super().get_details()
+        print(f"Preditors hunting techniques: {self.hunting_method}")
+
+
+class Prey(Animal_Species):
+    def __init__(self, name, migration_pattren, typical_lifespan, migration_pattern):
+        super().__init__(name, migration_pattren, typical_lifespan)
+        self.migration_pattern = migration_pattern
+
+    def get_details(self):
+        super().get_details()
+        print(f"Changes in migration pattern: {self.migration_pattern}")
